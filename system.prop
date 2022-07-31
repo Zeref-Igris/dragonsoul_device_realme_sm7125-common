@@ -56,10 +56,6 @@ ro.com.google.ime.kb_pad_port_r=6
 ro.com.google.ime.kb_pad_land_l=12
 ro.com.google.ime.kb_pad_land_r=12
 
-# Graphics
-ro.sf.blurs_are_expensive=0
-ro.surface_flinger.supports_background_blur=0
-
 # Goodix FP
 ro.boot.flash.fucked=0
 vendor.fingerprint.cali=1
