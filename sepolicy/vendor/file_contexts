@@ -1,28 +1,28 @@
 # Goodix Fingerprint device
-/dev/goodix_fp                                                                                           u:object_r:goodix_device:s0
+/dev/goodix_fp                                                                            u:object_r:goodix_device:s0
 
 # FPC Fingerprint
-/sys/bus/platform/devices/soc:fpc1020(/.*?)    u:object_r:vendor_sysfs_fps_attr:s0
+/sys/bus/platform/devices/soc:fpc1020(/.*?)                                               u:object_r:vendor_sysfs_fps_attr:s0
 
 # Biometrics
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.3-service\.realme_sm7125    u:object_r:hal_fingerprint_default_exec:s0
-/(vendor|odm)/bin/hw/vendor\.oplus\.hardware\.biometrics\.fingerprint@2\.1-service              u:object_r:hal_fingerprint_default_exec:s0
+/(vendor|odm)/bin/hw/vendor\.oplus\.hardware\.biometrics\.fingerprint@2\.1-service        u:object_r:hal_fingerprint_default_exec:s0
 
 # Light Hal
-/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.realme_sm7125                      u:object_r:hal_light_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.realme_sm7125       u:object_r:hal_light_default_exec:s0
 
 # Oppo HIDL hals
 /(vendor|system/vendor)/bin/hw/vendor\.oppo\.hardware\.camera\.oppoAlgoProcessService@1\.0-service u:object_r:hal_camera_default_exec:s0
 /(vendor|odm)/bin/hw/vendor\.oplus\.hardware\.orms\.ormsHalService@1\.0-service u:object_r:hal_oppo_default_exec:s0
 
 # Camera
-/mnt/vendor/persist/camera(/.*)?                                                             u:object_r:vendor_persist_camera_file:s0
+/mnt/vendor/persist/camera(/.*)?                                                                         u:object_r:vendor_persist_camera_file:s0
 
 # Oppo Partitions
 /dev/block/platform/soc/1d84000.ufshc/by-name/oppodycnvbk                                                u:object_r:vendor_modem_efs_partition_device:s0
 /dev/block/platform/soc/1d84000.ufshc/by-name/oppostanvbk                                                u:object_r:vendor_modem_efs_partition_device:s0
-/dev/block/platform/soc/1d84000.ufshc/by-name/opporeserve[0-9]                                                u:object_r:vendor_modem_efs_partition_device:s0
-/dev/block/platform/soc/1d84000.ufshc/by-name/oppo_sec                                                u:object_r:vendor_modem_efs_partition_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/opporeserve[0-9]                                           u:object_r:vendor_modem_efs_partition_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/oppo_sec                                                   u:object_r:vendor_modem_efs_partition_device:s0
 
 # mdmreason device
 /dev/mdmreason             u:object_r:vendor_mdmreason_device:s0
@@ -38,10 +38,10 @@
 /data/opponvitems(/.*)?    u:object_r:vendor_radio_vendor_data_file:s0
 
 # MMC 
-/sys/devices/virtual/bdi/[0-999]+:[0-999]+/read_ahead_kb               u:object_r:vendor_sysfs_mmc_host:s0
+/sys/devices/virtual/bdi/[0-999]+:[0-999]+/read_ahead_kb                        u:object_r:vendor_sysfs_mmc_host:s0
 
 # SSR
-/sys/devices/platform/soc/9800000.qcom,npu/subsys[0-9]/name          u:object_r:vendor_sysfs_ssr:s0
+/sys/devices/platform/soc/9800000.qcom,npu/subsys[0-9]/name                     u:object_r:vendor_sysfs_ssr:s0
 /sys/devices/platform/soc/62400000.qcom,lpass/subsys[0-9]/restart_level         u:object_r:vendor_sysfs_ssr_toggle:s0
 /sys/devices/platform/soc/4080000.qcom,mss/subsys[0-9]/restart_level            u:object_r:vendor_sysfs_ssr_toggle:s0
 /sys/devices/platform/soc/8300000.qcom,turing/subsys[0-9]/restart_level         u:object_r:vendor_sysfs_ssr_toggle:s0
@@ -50,10 +50,10 @@
 /sys/devices/platform/soc/soc:qcom,kgsl-hyp/subsys[0-9]/restart_level           u:object_r:vendor_sysfs_ssr_toggle:s0
 
 # SecureElement
-/(vendor|odm)/bin/hw/android\.hardware\.secure_element@1\.0-service-disabled      u:object_r:hal_secure_element_default_exec:s0
+/(vendor|odm)/bin/hw/android\.hardware\.secure_element@1\.0-service-disabled    u:object_r:hal_secure_element_default_exec:s0
 
 # FPS Info
-/sys/module/primary_display/parameters/display_framerate_main      u:object_r:sysfs_fpsinfo:s0
+/sys/module/primary_display/parameters/display_framerate_main                   u:object_r:sysfs_fpsinfo:s0
 
 # Power
-/vendor/bin/hw/android\.hardware\.power-service\.xiaomi-libperfmgr      u:object_r:hal_power_default_exec:s0
+/vendor/bin/hw/android\.hardware\.power-service                                 u:object_r:hal_power_default_exec:s0
